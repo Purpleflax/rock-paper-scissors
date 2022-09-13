@@ -14,7 +14,7 @@ let computerChoice = 0
 
 
 
-function playRound() {
+function playRound(playerChoice, computerChoice) {
 
     computerChoice = Math.floor(Math.random() * 3) + 1
     let playerChoiceString1 = prompt("Please type Rock, Paper, or Scissors.")
@@ -32,17 +32,17 @@ function playRound() {
     console.log("You have chosen an invalid input.")
     }
     if (playerChoice == computerChoice) {
-        return("Draw")
+        console.log("Draw")
     }
     //Draw function
     
     if (playerChoice == 1) {
         if (computerChoice == 2) {
             computerScore++
-            return("Computer Wins! Paper beats Rock.")
+            console.log("Computer wins this round! Paper beats Rock.")
         }   else if(computerChoice == 3) {
             playerScore++
-            return("Player Wins! Rock beats Scissors.")
+            console.log("Player wins this round! Rock beats Scissors.")
         }
     }
     //Rock selection function
@@ -50,10 +50,10 @@ function playRound() {
     if (playerChoice == 2) {
         if (computerChoice == 3) {
             computerScore++
-            return("Computer Wins! Scissors beats Paper.")
+            console.log("Computer wins this round! Scissors beats Paper.")
         }   else if(computerChoice == 1) {
             playerScore++
-            return("Player Wins! Paper beats Rock.")
+            console.log("Player wins this round! Paper beats Rock.")
         }
     }
     //Paper selection function
@@ -61,24 +61,31 @@ function playRound() {
     if (playerChoice == 3) {
         if (computerChoice == 1) {
             computerScore++
-            return("Computer Wins! Rock beats Scissors.")
+            console.log("Computer wins this round! Rock beats Scissors.")
         }   else if(computerChoice == 2) {
             playerScore++
-            return("Player Wins! Scissors beats Paper.")
+            console.log("Player wins this round! Scissors beats Paper.")
         }
     }
     //Scissors selection function
+
 }
 
 function game() {
+    computerScore = 0
+    playerScore = 0
+    //plays 5 rounds
+    
     for (let i = 0; i < 5; i++) {
         playRound()
     }
-}
-
-if (playerScore > computerScore) {
-    console.log("Player Wins!")
-} 
-else if (playerScore < computerScore) {
-    console.log("Computer Wins!")
+    if (playerScore > computerScore) {
+        console.log("Player Wins!")
+    } 
+    else if (playerScore < computerScore) {
+        console.log("Computer Wins!")
+    }
+    else if (playerScore == computerScore) {
+        console.log("It's a tie!")
+    }   
 }
