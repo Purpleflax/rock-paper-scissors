@@ -1,3 +1,25 @@
+let array = [1, 2, 3];
+let rand = Math.random()
+rand *= array.lenght;
+rand = Math.floor(rand);
+
+// 1 = Rock
+// 2 = Paper
+// 3 = Scissors
+let playerChoiceString = prompt("Please type Rock, Paper, or Scissors.")
+
+if (playerChoiceString == "Rock") {
+    playerChoice == 1;
+}
+    else if (playerChoiceString == "Paper") {
+    playerChoice == 2;
+    }
+    else if (playerChoiceString == "Scissors") {
+    playerChoice == 3;
+    }
+    else {
+    console.log("You have chosen an invalid input.")
+    }
 
 function playRound(playerChoice, computerChoice) {
     if (playerChoice == computerChoice) {
@@ -5,28 +27,28 @@ function playRound(playerChoice, computerChoice) {
     }
     //Draw function
     
-    if (playerChoice == "Rock") {
-        if (computerChoice == "Paper") {
+    if (playerChoice == 1) {
+        if (computerChoice == 2) {
             return("Computer Wins")
-        }   elif(computerChoice == "Scissors") {
+        }   else if(computerChoice == 3) {
             return("Player Wins")
         }
     }
     //Rock selection function
 
-    if (playerChoice == "Paper") {
-        if (computerChoice == "Scissors") {
+    if (playerChoice == 2) {
+        if (computerChoice == 3) {
             return("Computer Wins")
-        }   elif(computerChoice == "Rock") {
+        }   else if(computerChoice == 1) {
             return("Player Wins")
         }
     }
     //Paper selection function
 
-    if (playerChoice == "Scissors") {
-        if (computerChoice == "Rock") {
+    if (playerChoice == 3) {
+        if (computerChoice == 1) {
             return("Computer Wins")
-        }   elif(computerChoice == "Paper") {
+        }   else if(computerChoice == 2) {
             return("Player Wins")
         }
     }
