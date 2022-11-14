@@ -1,3 +1,7 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 .headings {
     display: flex;
     align-items: center;
@@ -8,10 +12,10 @@
 .buttonArray {
     display: flex;
     background-color: white;
-    padding: 180px;
+    padding: 50px;
+    padding-bottom: 100px;
     gap: 48px;
     justify-content: center;
-    padding-top: 50px;
 }
 
 .resultsArray {
@@ -38,4 +42,18 @@ button:active {
 .symbols {
     height: 220px;
     width: 220px;
+}
+
+.plpc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 88px;
+}
+
+#score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 144px;
 }
